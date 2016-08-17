@@ -124,6 +124,8 @@ on charger
 
 on fs
     export ANDROID_STORAGE ""
+    export LD_SHIM_LIBS /system/lib/liblog.so|libshim_liblog.so
+
 
     fs_wait system
 

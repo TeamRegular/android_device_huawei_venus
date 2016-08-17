@@ -212,3 +212,7 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/phone.prop:system/phone.prop
 # Thermal Configurations (These will be added later)
 
 # CPU Profiles (These will be added later)
+
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_liblog
