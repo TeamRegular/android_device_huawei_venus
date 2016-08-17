@@ -98,7 +98,7 @@ on property:sys.boot_completed=1
 	rm /data/hisi_logs/reboot_times.log
 
 on charger
-    mount_all /fstab.${ro.hardware}
+    mount_all /fstab.hi6250
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     restorecon_recursive /sys/devices/system/cpu/cpu0/cpufreq/interactive
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 807000
@@ -128,7 +128,7 @@ on fs
     fs_wait system
 
     fs_wait userdata
-    mount_all /fstab.${ro.hardware}
+    mount_all /fstab.hi6250
 
     chown root root /sec_storage
     chmod 600 /sec_storage
